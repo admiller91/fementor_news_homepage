@@ -9,11 +9,19 @@
  
 body {
     font-family: 'Inter', sans-serif;
-    margin:0;
-    margin-left: 250px;
-    margin-right: 250px;
-background-color: #000000;
+    max-width:1440px;
+    background-color: #000000;
+    margin:auto;
+}
 
+@media screen and (max-width:1440px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    #container {
+        padding:0;
+    }
 }
 
 #container {
