@@ -21,9 +21,9 @@ body {
 
 
 #container {
-    background-color: #ffffff;
-    /* padding: 50px 150px 50px 150px; */
+    background-color: var(--off-white);
     padding: 3%;
+    z-index: auto;
 }
 
 
@@ -34,7 +34,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: var(--dark-blue);
-    /* margin-bottom:50px; */
     width:100%;
 }
 
@@ -53,13 +52,80 @@ nav {
     cursor: pointer;
 }
 
+/* mobile nav */
+
+.mobile-menu-image {
+    display:none;
+}
+
+.mobile-menu {
+    display:none;
+}
+
+/* CHANGE THE WIDTH - 100px is only for testing purposes */
+@media screen and (max-width:100px) {
+    .mobile-menu-container {
+        display: flex;
+        justify-content: flex-end;
+        width:100%;
+    }
+    .mobile-menu {
+        display:flex;
+        flex-direction: column;
+        height:100vh;
+        width:60%;
+        background-color: #FFFFFF;
+        position: absolute;
+        z-index: 2;
+        padding:2%;
+    }
+
+    .mobile-menu-close-img {
+        width:30px;
+        height:30px;
+        align-self: flex-end;
+        margin-bottom:25%;
+    }
+
+    .mobile-menu-close-img:hover {
+        cursor: pointer;
+    }
+
+    .mobile-menu-list {
+        list-style: none;
+        margin: 0;
+        padding:0;
+        font-size:1.2em;
+    }
+
+    .mobile-menu-list li{
+        padding-bottom:10%;
+        padding-left:5%;
+    }
+
+    .mobile-menu-list li:hover {
+        color: var(--soft-red);
+        cursor: pointer;
+    }
+}
+
+
+@media  screen and (max-width: 640px) {
+    #nav-list {
+        display: none;
+    }
+
+    .mobile-menu-image {
+        display:inline;
+    }
+}
+
 /*main articles sections*/
 #main-articles {
     width:100%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-bottom:50px; */
 }
 
 #spotlight-article {
@@ -215,9 +281,9 @@ max-height:150px;
 
 /* under 1000px */
 @media screen and (max-width:1000px) {
-    #nav-list > li {
+    /* #nav-list > li {
         padding-left:5px;
-    }
+    } */
 
     #main-articles {
         flex-direction: column;
