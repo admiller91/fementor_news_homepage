@@ -60,6 +60,7 @@ I knew about the box-sizing issue but this was the first time I encountered prob
     box-sizing: border-box;
   }
 ```
+One of the challenging parts of this challenge was the mobile menu. Its something Ive never had to do. I knew i could find hundreds of tutorials online about how to do this but instead I wanted to do this on my own. I was able to break down the problem into multiple acheivable steps. I started by just creating a new container for the menu and adding the list. I struggled to get the zindex and positioning right but was able to come up with a solution. Once the zindex was right I focused on getting it aligned to the right and the padding to match the design. To align it to the right i had to add another container div to the markup so the width could be 100% and then I could set only the menu part to the right.
 
 ### Continued development
 
